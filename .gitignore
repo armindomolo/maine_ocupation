@@ -1,0 +1,37 @@
+# ---- Python ----
+#__pycache__/
+#*.pyc
+#*.pyo
+#*.pyd
+#*.pkl
+#*.joblib
+
+# ---- Ambiente Virtual ----
+.venv/
+venv/
+env/
+
+# ---- Jupyter Notebook ----
+.ipynb_checkpoints/
+
+# ---- Dados brutos (ajuste conforme seu projeto) ----
+#data/raw/
+#data/interim/
+#*.csv
+#*.tsv
+#*.xlsx
+#*.xls
+#*.json
+*.txt
+
+# ---- Logs ----
+#*.logs
+
+# ---- Modelos treinados ----
+#models/
+#checkpoints/
+
+# ---- Configurações locais ----
+#.vscode/
+#*.code-workspace
+#.DS_Store
