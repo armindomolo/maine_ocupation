@@ -7,6 +7,11 @@ import os
 Pastas de funcoes para o uso do programa:
 
 """
+
+# decorador de print:
+def printAll(func):
+    
+    return func
 # Carregar Json:
 def loarding_json(path: str, key: str = None):
     with open(path, 'r', encoding='utf-8') as f:
@@ -32,8 +37,12 @@ def dataFrame(path:str ,key:str= None):
     else:
         print("Tipo de dados invalidos verifique o 'directorio'")
 
+# Numero de registo por catetoria:s
+def print_numero_registro(df:dataFrame, *args) -> None:
+   print(df.groupby(*args).size().sort_values(ascending=False))
+
 
 
 if __name__== "__main__":
-    pass   
+  pass
         

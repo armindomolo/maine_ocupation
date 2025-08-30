@@ -36,6 +36,7 @@ class DataClient:
             #return self.datas
         else:
             raise Exception(f"Erro ao consultat os dados {response.status_code}")
+    
         
 
     def to_dataframe(self):
@@ -48,9 +49,19 @@ class DataClient:
             [columns.append(x) for x in self.df.columns]
             print("columns name")
             print(columns)
-            return self.data
+            return self.df
         else:
             raise Exception("Estrutura de dados inesperada")
+    
+    def save_csv(self,path):
+      
+        """Converter os valores em dataFrame"""
+        if self.df is None or self.df.empty:
+            raise ValueError("dados nao baixados.execute o source data para obtelas")
+        try: 
+            self.df.to_csv(path, index=False)     
+        except:
+            raise Exception("Estrutura de dados inesperada erro ao salvar o csv")    
         
 if __name__ =="__main__":
      pass 
